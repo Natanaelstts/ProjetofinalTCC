@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusão</title>
+    <link rel="stylesheet" href="style.css"> <!-- Certifique-se de que o caminho para o CSS está correto -->
+    <style>
+        #inclusao {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#inclusao h2 {
+    color: #333;
+}
+
+#inclusao h3 {
+    color: #5c9ead;
+    margin-top: 15px;
+}
+
+#inclusao ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#inclusao li {
+    margin: 10px 0;
+}
+
+#inclusao a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #5c9ead;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#inclusao a:hover {
+    background-color: #4682b4;
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inclusão</h1>
+        <header>
+            <h1></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+                    <li><a href="jogos.html">Jogos e Atividades</a></li>
+                    <li><a href="inclusao.html">Inclusão</a></li>
+                    <li><a href="pais_professores.html">Pais e Professores</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="inclusao">
+            <h2>Inclusão</h2>
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="https://pt.khanacademy.org/">Khan Academy</a></li>
+                <li><a href="https://www.coursera.org/">Coursera</a></li>
+                <li><a href="https://www.unesco.org/">UNESCO</a></li>
+                <li><a href="https://www.apa.org">APA</a></li>
+                <li><a href="https://www.texthelp.com/en-us/products/read-write/">Read&Write</a></li>
+                <li><a href="https://www.ghotit.com/">Ghotit</a></li>
+                <li><a href="https://dredf.org/">DREDF</a></li>
+                <li><a href="https://ldaamerica.org/">Learning Disabilities Association of America</a></li>
+            </ul>
+        
+            <h3>Faça sua Sugestão</h3>
+            <form id="sugestaoForm">
+                <textarea name="sugestao" rows="4" cols="50" placeholder="Digite sua sugestão aqui..." required></textarea>
+                <br>
+                <input type="submit" value="Enviar Sugestão">
+            </form>
+        
+            <p id="mensagem" style="color: green; display: none;">Sugestão enviada com sucesso!</p>
+        </section>
+        
+        <script>
+            // JavaScript para enviar o formulário sem recarregar a página
+            document.getElementById('sugestaoForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+        
+                var formData = new FormData(this);
+        
+                // Envia a requisição AJAX
+                fetch('enviar_sugestao.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Exibe a mensagem de sucesso
+                    document.getElementById('mensagem').style.display = 'block';
+                    // Limpa o campo de sugestão
+                    document.querySelector('textarea[name="sugestao"]').value = '';
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Ocorreu um erro ao enviar a sugestão.');
+                });
+            });
+        </script>
+        
+        
+        
+        
+        

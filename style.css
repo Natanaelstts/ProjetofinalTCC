@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e0f7fa; /* Azul claro suave (cyan) */
+    color: #333; /* Cor do texto principal para boa legibilidade */
+    padding: 20px;
+}
+
+header {
+    background-color: #ffcc80; /* Laranja pastel suave */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff6f61; /* Coral vibrante para o título */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #42a5f5; /* Azul claro vibrante para as abas */
+    background-color: #ffeb99; /* Amarelo suave */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+}
+
+nav ul li a:hover {
+    background-color: #ff6f61; /* Coral no hover */
+    color: white; /* Texto branco ao passar o mouse */
+}
+
+.section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #e0f7fa; /* Azul claro suave, igual ao fundo do corpo */
+    color: #333; /* Texto escuro para contraste */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #ff6f61; /* Coral para títulos */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul.game-list {
+    list-style: none;
+}
+
+ul.game-list li {
+    margin-bottom: 10px;
+}
+
+ul.game-list li a {
+    color: #42a5f5; /* Azul claro vibrante */
+    text-decoration: none;
+}
+
+ul.game-list li a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Coral no hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer a {
+    color: #42a5f5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff6f61;
+}
